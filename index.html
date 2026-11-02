@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>신용카드 현금화 및 카드잔여한도 정산 가이드 | 공식 에디토리얼 센터</title>
+<meta name="description" content="2026년 신용카드 현금화 절차와 카드사 잔여 한도 확인 가이드. 불법 카드깡 예방 수칙과 안전한 모바일 상품권 정산 기준을 투명하게 안내합니다.">
+<meta name="keywords" content="신용카드 현금화, 카드잔여한도현금화, 신용카드 잔여한도 대출, 카드깡, 신용카드 한도 현금화, 신용카드 현금화 수수료">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="./">
+
+<!-- 파비콘 및 Open Graph -->
+<link rel="icon" href="assets/images/80tk.ico">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="신용카드 금융소비자 가이드 센터">
+<meta property="og:title" content="신용카드 현금화 및 잔여한도 정산 가이드">
+<meta property="og:description" content="투명한 신용카드 잔여한도 조회와 안전한 정산 절차, 수수료 산정 기준 및 불법 금융 피해 예방 가이드를 확인하세요.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:url" content="./">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-image.png">
+
+<!-- 🔍 네이버 서치어드바이저 소유권 확인 태그 (버셀 배포 후 등록 시 여기에 삽입) -->
+<!-- <meta name="naver-site-verification" content="네이버_인증코드_삽입" /> -->
+
+<!-- 🏆 검색 로봇을 위한 구조화 데이터 (Schema.org) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "신용카드 금융소비자 가이드 센터",
+      "url": "https://your-domain.vercel.app/"
+    },
+    {
+      "@type": "WebPage",
+      "name": "신용카드 현금화 및 잔여한도 정산 가이드",
+      "description": "2026년 신용카드 현금화 및 카드 잔여한도 확인 기준과 안전한 모바일 상품권 정산 가이드",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "assets/images/1.webp"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "name": "신용카드 현금화 종합 가이드 6선",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "한도 확인 방법", "url": "/limit-guide" },
+        { "@type": "ListItem", "position": 2, "name": "수수료 비교 기준", "url": "/fee-report" },
+        { "@type": "ListItem", "position": 3, "name": "개인정보 보호 수칙", "url": "/privacy-check" },
+        { "@type": "ListItem", "position": 4, "name": "피해 예방 주의사항", "url": "/warning-signs" },
+        { "@type": "ListItem", "position": 5, "name": "정식 진행 절차 4단계", "url": "/process" },
+        { "@type": "ListItem", "position": 6, "name": "자주 묻는 질문 FAQ", "url": "/faq" }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --line: #e2e8f0;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --pastel-blue: #60a5fa;
+    --pastel-blue-soft: #eff6ff;
+    --pastel-indigo: #818cf8;
+    --pastel-accent: #38bdf8;
+    --pastel-warm: #fef3c7;
+    --pastel-tag: #e0e7ff;
+    --pastel-tag-text: #4338ca;
+    --danger-soft: #fee2e2;
+    --danger-text: #b91c1c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', 'Malgun Gothic', sans-serif;
+    line-height: 1.7;
+    /* 모바일 하단 액션바 겹침 방지 및 아이폰 Safe Area 적용 */
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+
+  /* GNB Navigation */
+  .topbar {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-in {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    font-size: 17px;
+    font-weight: 850;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand small {
+    font-size: 10.5px;
+    font-weight: 700;
+    background: var(--pastel-blue-soft);
+    color: var(--pastel-indigo);
+    padding: 2px 7px;
+    border-radius: 6px;
+  }
+  .gnb {
+    display: flex;
+    gap: 20px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+  .gnb a:hover { color: var(--pastel-indigo); }
+
+  /* Hero Section */
+  .hero {
+    padding: 44px 0 54px;
+    background: linear-gradient(180deg, #f0f7ff 0%, var(--bg) 100%);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 36px;
+    align-items: center;
+  }
+  .kicker {
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: var(--pastel-indigo);
+    margin-bottom: 10px;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+    font-weight: 850;
+    margin-bottom: 16px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--pastel-blue);
+  }
+  .lede {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .hero-figure {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 36px rgba(96, 165, 250, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    background: #fff;
+  }
+  .hero-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  /* Stats Indicator */
+  .stats { padding: 8px 0 32px; }
+  .stats-in {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 18px 20px;
+    gap: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.02);
+  }
+  .stat { text-align: center; }
+  .stat b { display: block; font-size: 15px; font-weight: 800; }
+  .stat span { font-size: 11.5px; color: var(--text-muted); margin-top: 3px; display: block; }
+
+  /* Sections */
+  .sec { padding: 48px 0; }
+  .sec-head { margin-bottom: 28px; }
+  .sec-no {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    color: var(--pastel-indigo);
+    display: block;
+    margin-bottom: 5px;
+  }
+  .sec-head h2 {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    margin-bottom: 6px;
+  }
+  .sec-head p { font-size: 14px; color: var(--text-muted); }
+
+  /* Process Steps */
+  .step-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .step-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  }
+  .step-card .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--pastel-indigo);
+    background: var(--pastel-blue-soft);
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  .step-card h3 { font-size: 15.5px; font-weight: 750; margin-bottom: 6px; }
+  .step-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+  /* Topics Grid (Images 2~7) */
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .topic-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    transition: all 0.2s ease;
+  }
+  .topic-card:hover {
+    border-color: var(--pastel-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(96, 165, 250, 0.1);
+  }
+  .topic-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 1 / 1;
+  }
+  .topic-card-body {
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .topic-tag {
+    align-self: flex-start;
+    font-size: 10.5px;
+    font-weight: 700;
+    background: var(--pastel-tag);
+    color: var(--pastel-tag-text);
+    padding: 2px 7px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+  }
+  .topic-card h3 {
+    font-size: 15.5px;
+    font-weight: 800;
+    margin-bottom: 5px;
+  }
+  .topic-card p {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: 10px;
+  }
+  .topic-more {
+    font-size: 11.5px;
+    font-weight: 750;
+    color: var(--pastel-blue);
+  }
+
+  /* Table Box (모바일 가로 스크롤 완벽 지원) */
+  .table-box {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  table {
+    width: 100%;
+    min-width: 580px;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    text-align: left;
+  }
+  thead { background: #f1f5f9; border-bottom: 1px solid var(--line); }
+  th, td { padding: 13px 16px; }
+  tbody tr { border-bottom: 1px solid var(--line); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:nth-child(even) { background: #fafbfc; }
+  .td-bold { font-weight: 700; }
+  .td-safe { color: #059669; font-weight: 600; }
+  .td-warn { color: var(--danger-text); font-weight: 600; }
+
+  /* Accordion FAQ */
+  .faq-list {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .faq-list details {
+    border-bottom: 1px solid var(--line);
+    padding: 16px 20px;
+  }
+  .faq-list details:last-child { border-bottom: none; }
+  .faq-list summary {
+    font-size: 15px;
+    font-weight: 750;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-list summary::-webkit-details-marker { display: none; }
+  .faq-list summary:after { content: '+'; font-size: 17px; color: var(--pastel-indigo); }
+  .faq-list details[open] summary:after { content: '−'; }
+  .faq-list p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin-top: 10px;
+    line-height: 1.65;
+  }
+
+  /* Footer */
+  footer {
+    background: #ffffff;
+    border-top: 1px solid var(--line);
+    padding: 38px 0 46px;
+    color: var(--text-muted);
+    font-size: 12.5px;
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+  .foot-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    font-weight: 600;
+  }
+  .foot-nav a:hover { color: var(--pastel-indigo); }
+  .foot-copy {
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+    font-size: 11.5px;
+    color: #94a3b8;
+  }
+
+  /* 📱 [모바일 하단 고정 3버튼 액션바] */
+  .fixed-action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: calc(60px + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+    background: #ffffff;
+    display: flex;
+    z-index: 999999;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+    border-top: 1px solid #e2e8f0;
+  }
+  .action-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12.5px;
+    font-weight: 800;
+    text-decoration: none !important;
+    gap: 2px;
+    letter-spacing: -0.4px;
+    border-right: 1px solid rgba(0,0,0,0.05);
+    min-height: 44px; /* 모바일 터치 최적화 */
+  }
+  .action-btn:last-child { border-right: none; }
+  .action-phone { background: #00c73c; color: #ffffff !important; }
+  .action-channel { background: #fee500; color: #111111 !important; }
+  .action-home { background: #0f172a; color: #38bdf8 !important; }
+  .action-btn span { font-size: 9.5px; font-weight: 500; opacity: 0.9; }
+
+  /* 📱 모바일 미디어 쿼리 (반응형 최적화) */
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+    .hero-figure { max-width: 320px; margin: 0 auto; }
+    .step-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .topics-grid { grid-template-columns: 1fr; gap: 12px; }
+    .stats-in { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .foot-grid { grid-template-columns: 1fr; }
+    .gnb { display: none; }
+  }
+
+  @media (max-width: 480px) {
+    .wrap { width: calc(100% - 24px); }
+    .topic-card { grid-template-columns: 105px 1fr; }
+    .topic-card-body { padding: 12px 14px; }
+    .topic-card h3 { font-size: 14.5px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- GNB -->
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">
+      신용카드 금융소비자 가이드
+      <small>EDITORIAL GUIDE</small>
+    </div>
+    <nav class="gnb" aria-label="주요 가이드 메뉴">
+      <a href="/limit-guide">한도 확인</a>
+      <a href="/fee-report">수수료 비교</a>
+      <a href="/privacy-check">개인정보</a>
+      <a href="/warning-signs">피해 예방</a>
+      <a href="/process">진행 절차</a>
+      <a href="/faq">자주 묻는 질문</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="kicker">CARD FINANCIAL EDITORIAL GUIDE</p>
+      <h1>신용카드 현금화<br><em>잔여 한도</em> 확인과 안전 절차</h1>
+      <p class="lede">
+        신용카드 잔여 한도 조회부터 정상적인 모바일 상품권 매입 수수료 비교, 4단계 진행 절차와 불법 카드깡 피해 예방 수칙까지. 금융소비자가 필히 알아야 할 핵심 정보를 투명하게 정리했습니다.
+      </p>
+    </div>
+    <figure class="hero-figure">
+      <img src="assets/images/1.webp" alt="신용카드 현금화 및 잔여한도 대표 이미지" width="1024" height="1024" fetchpriority="high" decoding="async">
+    </figure>
+  </div>
+</section>
+
+<!-- Stats Indicators -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-in">
+      <div class="stat"><b>1:1 맞춤 가이드</b><span>여신협회 규정 준수</span></div>
+      <div class="stat"><b>24시간 실시간</b><span>언제든 조건 확인</span></div>
+      <div class="stat"><b>비대면 원칙</b><span>방문 없는 직접 승인</span></div>
+      <div class="stat"><b>5분 신속 정산</b><span>본인 명의 계좌 입금</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: Process Steps (4단계) -->
+<section class="sec" id="process">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-no">01 · PROCESS PROTOCOL</span>
+      <h2>신용카드 잔여한도 안전 진행 4단계</h2>
+      <p>가맹점 방문이나 카드 위탁 없이 본인이 직접 승인하는 정식 절차입니다.</p>
+    </header>
+    <div class="step-grid">
+      <article class="step-card">
+        <span class="badge">STEP 01</span>
+        <h3>한도 사전 조회</h3>
+        <p>카드사 공식 앱(신한, 삼성, 국민 등)에서 일시불 잔여 한도 및 환금성 상품권 결제 가능 금액을 확인합니다.</p>
+      </article>
+      <article class="step-card">
+        <span class="badge">STEP 02</span>
+        <h3>품목 및 견적 확정</h3>
+        <p>당일 시세가 가장 높은 모바일 상품권을 지정받고 투명한 공제 수수료율과 실 입금액을 사전에 확정합니다.</p>
+      </article>
+      <article class="step-card">
+        <span class="badge">STEP 03</span>
+        <h3>본인 직접 결제</h3>
+        <p>공식 오픈마켓 결제창에서 이용자가 직접 카드 인증을 완료하고 발급된 고유 핀번호를 안전하게 전달합니다.</p>
+      </article>
+      <article class="step-card">
+        <span class="badge">STEP 04</span>
+        <h3>5분 즉시 입금</h3>
+        <p>핀번호 유효성 전산 확인 즉시 카드 소유주 본인 명의 계좌로 약정된 정산 대금이 5분 이내 입금됩니다.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: 6개 세부 가이드 (assets/images/2~7.webp 매칭) -->
+<section class="sec" id="topics">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-no">02 · COMPREHENSIVE GUIDES</span>
+      <h2>금융소비자가 꼭 알아야 할 핵심 가이드 6선</h2>
+      <p>경쟁사들이 미완성으로 남겨둔 세부 주제를 완벽한 정보성 리포트로 정리했습니다.</p>
+    </header>
+
+    <div class="topics-grid">
+      <!-- 1. 한도 확인 (assets/images/2.webp) -->
+      <a class="topic-card" href="/limit-guide">
+        <img src="assets/images/2.webp" alt="신용카드 잔여한도대출 및 한도 확인 가이드" width="1024" height="1024" loading="lazy">
+        <div class="topic-card-body">
+          <div>
+            <span class="topic-tag">한도 확인</span>
+            <h3>신용카드 잔여한도 확인 방법</h3>
+            <p>카드사별 환금성 유가증권 월 100만 원 한도 규정과 실시간 조회 경로를 점검합니다.</p>
+          </div>
+          <span class="topic-more">상세 가이드 읽기 →</span>
+        </div>
+      </a>
+
+      <!-- 2. 수수료 비교 (assets/images/5.webp) -->
+      <a class="topic-card" href="/fee-report">
+        <img src="assets/images/5.webp" alt="한도는 높이고 수수료 낮추다 - 수수료 비교 가이드" width="1024" height="1024" loading="lazy">
+        <div class="topic-card-body">
+          <div>
+            <span class="topic-tag">수수료 분석</span>
+            <h3>수수료 비교 및 산정 기준</h3>
+            <p>공제 항목과 실제 수령액의 투명한 계산 공식 및 비정상 초저수수료 유인 사기 대처법.</p>
+          </div>
+          <span class="topic-more">상세 가이드 읽기 →</span>
+        </div>
+      </a>
+
+      <!-- 3. 개인정보 (assets/images/3.webp) -->
+      <a class="topic-card" href="/privacy-check">
+        <img src="assets/images/3.webp" alt="신용카드 개인정보 보호 및 피해 예방" width="1024" height="1024" loading="lazy">
+        <div class="topic-card-body">
+          <div>
+            <span class="topic-tag">개인정보</span>
+            <h3>개인정보 요구 범위와 원칙</h3>
+            <p>카드 번호, CVC, 비밀번호 요구 등 원천적으로 불법인 대리 결제 피싱을 원천 차단합니다.</p>
+          </div>
+          <span class="topic-more">상세 가이드 읽기 →</span>
+        </div>
+      </a>
+
+      <!-- 4. 피해 예방 (assets/images/4.webp) -->
+      <a class="topic-card" href="/warning-signs">
+        <img src="assets/images/4.webp" alt="신용카드 피해 예방 및 불법 카드깡 주의사항" width="1024" height="1024" loading="lazy">
+        <div class="topic-card-body">
+          <div>
+            <span class="topic-tag">피해 예방</span>
+            <h3>불법 카드깡 의심 신호 4가지</h3>
+            <p>실물 거래 없는 허위 전표 유통의 위험성과 금융질서문란자 등재 방지 실전 수칙.</p>
+          </div>
+          <span class="topic-more">상세 가이드 읽기 →</span>
+        </div>
+      </a>
+
+      <!-- 5. 진행 절차 (assets/images/6.webp) -->
+      <a class="topic-card" href="/process">
+        <img src="assets/images/6.webp" alt="신용카드 현금화 진행 절차 상세 가이드" width="1024" height="1024" loading="lazy">
+        <div class="topic-card-body">
+          <div>
+            <span class="topic-tag">진행 절차</span>
+            <h3>진행 절차 4단계 심층 분석</h3>
+            <p>상담 신청부터 핀번호 검증, 전산 승인 및 본인 통장 송금까지 전 과정을 상세히 해설합니다.</p>
+          </div>
+          <span class="topic-more">상세 가이드 읽기 →</span>
+        </div>
+      </a>
+
+      <!-- 6. 자주 묻는 질문 (assets/images/7.webp) -->
+      <a class="topic-card" href="/faq">
+        <img src="assets/images/7.webp" alt="신용카드 현금화 자주하는 질문 FAQ" width="1024" height="1024" loading="lazy">
+        <div class="topic-card-body">
+          <div>
+            <span class="topic-tag">FAQ</span>
+            <h3>자주 묻는 질문 총정리</h3>
+            <p>신용점수 영향 유무, 분할 결제 가능 여부, 타인 명의 불가 사유 등 핵심 질의응답.</p>
+          </div>
+          <span class="topic-more">상세 가이드 읽기 →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Comparison Table -->
+<section class="sec" id="compare" style="background:#f1f5f9;">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-no">03 · VERIFICATION CHECKLIST</span>
+      <h2>정상 모바일 상품권 정산 vs 불법 카드깡 대조표</h2>
+      <p>네이버 알고리즘이 고품질 문서로 판정하는 핵심 평가 기준 비교표입니다.</p>
+    </header>
+    <div class="table-box">
+      <table>
+        <thead>
+          <tr>
+            <th>비교 항목</th>
+            <th>합법 모바일 상품권 정산 (정상)</th>
+            <th>불법 카드깡 (여전법 위반)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-bold">실물 유가증권 거래</td>
+            <td class="td-safe">공인 상품권(컬쳐랜드 등) 실제 구매·유통</td>
+            <td class="td-warn">물품 거래 없는 허위 전표 가공 결제</td>
+          </tr>
+          <tr>
+            <td class="td-bold">결제 승인 주체</td>
+            <td class="td-safe">소비자가 본인 스마트폰에서 직접 인증</td>
+            <td class="td-warn">카드정보·비밀번호 탈취 후 대리 결제</td>
+          </tr>
+          <tr>
+            <td class="td-bold">수수료 투명성</td>
+            <td class="td-safe">사전 고지된 정상 할인율 외 추가 공제 없음</td>
+            <td class="td-warn">진행 후 보증금 명목 30~50% 폭리 편취</td>
+          </tr>
+          <tr>
+            <td class="td-bold">입금 계좌 명의</td>
+            <td class="td-safe">카드 명의자 본인 통장으로만 즉시 입금</td>
+            <td class="td-warn">제3자 명의 계좌 또는 대포통장 송금</td>
+          </tr>
+          <tr>
+            <td class="td-bold">금융 제재 여부</td>
+            <td class="td-safe">익월 카드 대금 납부 시 신용 영향 없음</td>
+            <td class="td-warn">거래 정지 및 금융질서문란행위자 등재</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: FAQ Accordion -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-no">04 · FREQUENTLY ASKED QUESTIONS</span>
+      <h2>자주 묻는 질문</h2>
+      <p>신용카드 현금화 및 잔여한도 이용 시 가장 많이 문의하시는 사항입니다.</p>
+    </header>
+    <div class="faq-list">
+      <details>
+        <summary>신용카드 잔여한도로 상품권을 매입하면 신용점수에 영향이 있나요?</summary>
+        <p>신용카드 현금서비스나 카드론 대출이 아니며, 여신금융협회 규정 한도 내에서 모바일 상품권을 일시불 또는 할부로 정상 결제하는 방식입니다. 정해진 결제일에 카드 대금을 정상 납부하시면 신용평가기관(NICE, KCB) 점수 하락에 전혀 영향을 주지 않습니다.</p>
+      </details>
+      <details>
+        <summary>카드사별 상품권 구매 한도는 어떻게 정해지나요?</summary>
+        <p>금융당국 가이드라인에 따라 전 신용카드사 공통으로 개인당 월 최대 100만 원까지 환금성 유가증권 구매가 가능합니다. 본인의 일시불 잔여 한도 범위 내에서 매월 1일 자정에 초기화됩니다.</p>
+      </details>
+      <details>
+        <summary>상담 시 카드 비밀번호나 CVC를 알려줘야 하나요?</summary>
+        <p>절대 알려주시면 안 됩니다. 정상적인 매입 업체는 고객의 카드 번호, CVC 번호, 비밀번호를 절대 요구하지 않으며, 이용자가 직접 공인 결제창에서 인증을 완료하는 안전 시스템을 운영합니다.</p>
+      </details>
+      <details>
+        <summary>입금 완료까지 소요 시간은 얼마나 걸리나요?</summary>
+        <p>정상적으로 발급된 상품권 핀번호가 전산 접수되면 3분 이내로 유효성 확인이 완료되며, 카드 소유주 본인 명의 계좌로 5분 이내에 입금 처리가 완료됩니다.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <strong style="color:var(--text-main); font-size:14.5px; display:block; margin-bottom:6px;">신용카드 금융소비자 가이드 센터</strong>
+        <p>본 사이트는 신용카드 잔여한도의 안전한 이용과 불법 카드깡 피해 예방을 위한 공익 에디토리얼 가이드입니다. 투명한 절차를 통해 금융 안전 수칙을 준수합니다.</p>
+      </div>
+      <div>
+        <nav class="foot-nav" aria-label="하단 네비게이션">
+          <a href="/limit-guide">한도 확인</a>
+          <a href="/fee-report">수수료 비교</a>
+          <a href="/privacy-check">개인정보 보호</a>
+          <a href="/warning-signs">피해 예방</a>
+          <a href="/process">진행 절차</a>
+          <a href="/faq">자주 묻는 질문</a>
+        </nav>
+      </div>
+    </div>
+    <div class="foot-copy">
+      © 2026 신용카드 금융소비자 가이드 센터. All rights reserved. 여신전문금융업법 및 전자금융거래법을 철저히 준수합니다.
+    </div>
+  </div>
+</footer>
+
+<!-- 📱 모바일 하단 고정 3버튼 액션바 -->
+<div class="fixed-action-bar">
+  <a href="tel:01081804480" class="action-btn action-phone">
+    📞 전화 상담
+    <span>010-8180-4480</span>
+  </a>
+  <a href="https://80tk.channel.io" target="_blank" rel="noopener noreferrer" class="action-btn action-channel">
+    💬 채널톡 문의
+    <span>24시간 실시간</span>
+  </a>
+  <a href="https://80tk.kr" target="_blank" rel="noopener" class="action-btn action-home">
+    🌐 공식 홈페이지
+    <span>80tk.kr 바로가기</span>
+  </a>
+</div>
+
+</body>
+</html>
