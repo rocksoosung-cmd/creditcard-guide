@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>신용카드 현금화 수수료 비교 및 실부담금 산정 리포트 | 금융 가이드</title>
+<meta name="description" content="신용카드 현금화 수수료 산정 원리와 모바일 상품권 정산율 비교 기준, 비정상 초저수수료 유인 사기 대처법을 투명하게 안내합니다.">
+<link rel="canonical" href="https://creditcard-guide.vercel.app/fee-report">
+<link rel="icon" href="assets/images/80tk.ico">
+<meta property="og:type" content="article">
+<meta property="og:title" content="신용카드 현금화 수수료 비교 및 실부담금 산정 리포트">
+<meta property="og:description" content="투명한 수수료 공제율 계산법과 사기 업체의 초저수수료 미끼 구별법">
+<meta property="og:image" content="https://creditcard-guide.vercel.app/assets/images/5.webp">
+<meta property="og:url" content="https://creditcard-guide.vercel.app/fee-report">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "신용카드 현금화 수수료 비교 및 실부담금 산정 리포트",
+  "image": "https://creditcard-guide.vercel.app/assets/images/5.webp",
+  "author": { "@type": "Organization", "name": "신용카드 금융소비자 가이드 센터" }
+}
+</script>
+<style>
+  :root { --bg: #f8fafc; --surface: #ffffff; --line: #e2e8f0; --text-main: #1e293b; --text-muted: #64748b; --pastel-blue: #60a5fa; --pastel-indigo: #818cf8; --pastel-blue-soft: #eff6ff; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text-main); font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', 'Malgun Gothic', sans-serif; line-height: 1.75; padding-bottom: calc(76px + env(safe-area-inset-bottom)); word-break: keep-all; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { width: min(860px, calc(100% - 36px)); margin: 0 auto; }
+  .topbar { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--line); height: 60px; display: flex; align-items: center; }
+  .topbar-in { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+  .brand { font-size: 16px; font-weight: 800; }
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin: 24px 0 16px; }
+  .breadcrumb a { color: var(--pastel-indigo); }
+  .post-header { margin-bottom: 32px; }
+  .post-header h1 { font-size: clamp(24px, 3.5vw, 34px); font-weight: 850; letter-spacing: -0.6px; margin-bottom: 12px; }
+  .post-img { width: 100%; border-radius: 16px; margin-bottom: 28px; box-shadow: 0 10px 24px rgba(0,0,0,0.06); }
+  .content h2 { font-size: 20px; font-weight: 800; border-left: 4px solid var(--pastel-blue); padding-left: 12px; margin: 34px 0 16px; }
+  .content p { font-size: 15px; color: #334155; margin-bottom: 18px; }
+  .content ul { padding-left: 20px; margin-bottom: 22px; font-size: 14.5px; color: #334155; }
+  .content li { margin-bottom: 8px; }
+  .formula-card { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 20px; margin: 24px 0; font-family: monospace; font-size: 15px; color: #0f172a; }
+  .back-btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; background: #ffffff; border: 1px solid var(--line); border-radius: 8px; font-size: 13.5px; font-weight: 700; margin-top: 30px; }
+  .fixed-action-bar { position: fixed; bottom: 0; left: 0; right: 0; height: calc(60px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); background: #ffffff; display: flex; z-index: 999999; box-shadow: 0 -4px 20px rgba(0,0,0,0.08); border-top: 1px solid var(--line); }
+  .action-btn { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 12.5px; font-weight: 800; gap: 2px; border-right: 1px solid rgba(0,0,0,0.05); }
+  .action-phone { background: #00c73c; color: #fff !important; }
+  .action-channel { background: #fee500; color: #111 !important; }
+  .action-home { background: #0f172a; color: #38bdf8 !important; }
+  .action-btn span { font-size: 9.5px; font-weight: 500; opacity: 0.9; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap topbar-in"><a href="/" class="brand">신용카드 금융 가이드</a><a href="/" style="font-size:13px; font-weight:700; color:var(--pastel-indigo);">메인으로 이동</a></div></header>
+<main class="wrap">
+  <div class="breadcrumb"><a href="/">홈</a> &gt; <span>수수료 비교 리포트</span></div>
+  <article class="post-header">
+    <h1>신용카드 현금화 수수료 비교 및 실부담금 산정 리포트</h1>
+    <img src="assets/images/5.webp" alt="신용카드 수수료 비교 가이드" class="post-img">
+    <div class="content">
+      <p>신용카드 상품권 정산 시 발생하는 수수료는 온라인 PG 결제 수수료, 상품권 유통 할인율, 매입사의 전산 처리 비용으로 구성됩니다. 투명한 사전 고지 체계가 갖춰진 곳을 선별해야 부당한 추가 공제를 방지할 수 있습니다.</p>
+
+      <h2>1. 정상 정산 수수료 산정 공식</h2>
+      <div class="formula-card">
+        [실 수령액] = [결제 상품권 총액] - (PG 가맹점 결제 수수료 + 상품권 유통 할인율)
+      </div>
+      <p>정식 등록 업체는 결제 전 위 공식에 따른 실 수령액을 원 단위까지 확정 고지하며, 진행 후 보증금이나 전산 처리비 등의 명목으로 추가 차감을 요구하지 않습니다.</p>
+
+      <h2>2. 초저수수료(5% 미만) 유인 사기 주의보</h2>
+      <p>시장 유통 수수료 구조상 5% 미만의 수수료율은 원가 이하의 구조로 불가능합니다. 이러한 조건을 제시하는 곳은 다음과 같은 전형적인 사기 패턴을 보입니다.</p>
+      <ul>
+        <li><strong>핀번호 편취 후 잠적:</strong> 결제 승인 후 핀번호만 전달받고 정산금을 송금하지 않은 채 연락을 두절하는 수법.</li>
+        <li><strong>선결제 후 추가 공제:</strong> 처음에는 5%라고 유인한 뒤, 결제가 완료되면 부가세, 전산망 수수료 명목으로 30~40%를 일방 공제하는 행위.</li>
+      </ul>
+
+      <h2>3. 합리적인 수수료 확인 3대 체크포인트</h2>
+      <ul>
+        <li>전화나 채널톡 상담 시 <strong>"실제 내 통장에 입금되는 최종 금액이 얼마인가"</strong>를 확답받을 것.</li>
+        <li>결제 전 확정된 견적 내역을 문자나 서면 메신저 기록으로 남겨둘 것.</li>
+        <li>국세청 홈택스에 등록된 정상 사업자등록번호와 대표자명을 반드시 대조할 것.</li>
+      </ul>
+      <a href="/" class="back-btn">← 전체 가이드 목록으로 돌아가기</a>
+    </div>
+  </article>
+</main>
+<div class="fixed-action-bar">
+  <a href="tel:01081804480" class="action-btn action-phone">📞 전화 상담<span>010-8180-4480</span></a>
+  <a href="https://80tk.channel.io" target="_blank" rel="noopener noreferrer" class="action-btn action-channel">💬 채널톡 문의<span>24시간 실시간</span></a>
+  <a href="https://80tk.kr" target="_blank" rel="noopener" class="action-btn action-home">🌐 공식 홈페이지<span>80tk.kr 바로가기</span></a>
+</div>
+</body>
+</html>
